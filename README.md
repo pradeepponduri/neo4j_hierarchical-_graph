@@ -1,1 +1,1 @@
-# neo4j_hierarchical-_graph
+# neo4j_hierarchical_graph
