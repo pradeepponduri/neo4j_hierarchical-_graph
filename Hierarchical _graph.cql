@@ -3,7 +3,7 @@ create (n1:PRODUCT {id:1});
 
 //Let's create 100 children of the PRODUCT, COST_GROUPS connected to the top of the tree
 match (n1:PRODUCT {id:1})
-with range(1,100) as RANGE, n1
+with range(1,10) as RANGE, n1
 foreach (r in RANGE | create (n2:COST_GROUP {id:r})-[:PART_OF {quantity:round(rand()*100)}]->(n1) );
 
 //for every COST_GROUP, let's connect 100 children at a 3rd level, the COST_TYPEs
